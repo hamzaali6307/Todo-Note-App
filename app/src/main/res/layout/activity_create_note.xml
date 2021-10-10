@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    tools:context="nl.yoerinijs.nb.activities.EditNoteActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <TextView
+            android:text="Encripted Notes"
+            android:id="@+id/toolbar"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            />
+        <LinearLayout
+            android:gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_delete_black_24dp"
+                android:id="@+id/deleteButton"
+                app:backgroundTint="@color/colorAccent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_save_black_24dp"
+                app:backgroundTint="@color/colorAccent" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_reply_black_24dp"
+        android:id="@+id/backButton"
+        app:backgroundTint="@color/colorAccent" />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_shape"
+        android:padding="10dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="70dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/noteTitle"
+        android:hint="@string/prompt_note_title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/edit_shape"
+        android:padding="10dp"
+        android:gravity="start"
+        android:layout_marginTop="120dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/noteText"
+        android:hint="@string/prompt_note_body"
+        android:singleLine="false" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="146dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_share_black_24dp"
+        android:id="@+id/shareButton"
+        app:backgroundTint="@color/colorAccent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

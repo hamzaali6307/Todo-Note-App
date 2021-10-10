@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="nl.yoerinijs.nb.activities.NotesActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_notes" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNoteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_create_black_24dp"
+        app:backgroundTint="@color/colorAccent" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/listNotes"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false" />
+
+    <TextView
+        android:text="Encrypted notes not found!"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/introText"
+        android:textColor="@android:color/white"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
